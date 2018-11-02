@@ -1,0 +1,34 @@
+mat-card {
+  width: 95%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.toolbar {
+  background-color: #003C80;
+  color: #FFFFFF;
+}
+
+.body {
+  margin: 1rem;
+}
+
+mat-form-field,
+textarea {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.selection {
+  width: 50%;
+}
+
+button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #F1373D;
+}
+
+
+

@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-toolbar class="toolbar">
+      <span class="title">Menu</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/" routerLinkActive="active">Home</a>
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/add-player" routerLinkActive="active">Add Player</a>
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/leaderboard" routerLinkActive="active">Leaderboard</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar class="toolbar">
+      <mat-toolbar-row>
+        <button mat-icon-button id="menu-button" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <img id="logo" src="../assets/logo.png" (click)="home()">
+        <span class="title">PGA Tour</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
+

@@ -1,0 +1,25 @@
+mat-sidenav {
+  width: 200px;
+}
+
+#menu-button {
+  color: #FFFFFF;
+}
+
+.toolbar {
+  background-color: #003C80;
+}
+
+#logo {
+  height: 60px;
+  width: 50px;
+  margin: 20px;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+.title {
+  color: #FFFFFF;
+}

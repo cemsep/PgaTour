@@ -1,0 +1,186 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()" name="myForm" novalidate>
+  <mat-card>
+
+    <mat-toolbar>
+      <mat-toolbar-row class="toolbar">Player Information</mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="body">
+      <mat-form-field>
+        <textarea matInput placeholder="Player Name" [(ngModel)]="player.name" name="name" required></textarea>
+      </mat-form-field>
+
+      <table class="front9" cellspacing="0"><tr>
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 1</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole1" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 2</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole2" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 3</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole3" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 4</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole4" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 5</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole5" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 6</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole6" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 7</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole7" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 8</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole8" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 9</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole9" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+      </tr></table>
+
+
+      <table class="back9" cellspacing="0"><tr>
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 10</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole10" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 11</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole11" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 12</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole12" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 13</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole13" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 14</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole14" [ngModelOptions]="{standalone: true}"required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 15</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole15" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 16</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole16" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 17</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole17" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+
+        <td><mat-form-field class="selection">
+          <mat-label>Hole 18</mat-label>
+          <mat-select #hole [(ngModel)]="scorecard.hole18" [ngModelOptions]="{standalone: true}" required>
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field></td>
+      </tr></table>
+
+      <div>
+        <button mat-raised-button type="submit" [disabled]="form.invalid || hole.empty">Register Score</button>
+      </div>
+    </div>
+  </mat-card>
+</form>
+

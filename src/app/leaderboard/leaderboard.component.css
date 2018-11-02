@@ -1,0 +1,89 @@
+.mat-elevation-z8 {
+  width: 95%;
+  margin: 3rem auto;
+}
+
+#title {
+  background-color: #003C80;
+  color: #FFFFFF;
+}
+
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+  background: #424242;
+}
+
+tr.player-row:not(.expanded):hover {
+  background: #f5f5f5;
+}
+
+tr.player-row:not(.expanded):active {
+  background: #efefef;
+}
+
+.player-row.expanded {
+  background: grey;
+}
+
+.player-row.expanded td {
+  color: #FFFFFF;
+}
+
+.player-row td {
+  border-bottom-width: 0;
+}
+
+.player-detail {
+  overflow: hidden;
+  display: block;
+}
+
+.scorecardFront9, .scorecardBack9 {
+  max-width: 80%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.scorecardFront9, .scorecardFront9 tr th {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+  color: #FFFFFF;
+}
+
+.scorecardFront9, .scorecardFront9 tr td {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+}
+
+.scorecardBack9, .scorecardBack9 tr th {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+  color: #FFFFFF;
+}
+
+.scorecardBack9, .scorecardBack9 tr td {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+}
+
+.firstRow {
+  background-image: linear-gradient(#515151, #424242);
+}
+
+#tableRowTitle {
+  width: 10%;
+}
+
+.button {
+  margin-top: 1rem;
+  background-color: grey;
+  color: #FFFFFF;
+}
+
+#delButton {
+  float: right;
+}

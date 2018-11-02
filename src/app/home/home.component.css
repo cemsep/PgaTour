@@ -1,0 +1,29 @@
+mat-card {
+  width: 95%;
+  height: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 0;
+  background-image: url("/assets/meland_golf.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.hero-text {
+  font-family: 'Podkova';
+  font-size: 30px;
+  color: white;
+  position: relative;
+  top: 40%;
+}
+
+.hero-button {
+  position: relative;
+  top: 50%;
+}
+
+.spacer {
+  margin: 3rem;
+}

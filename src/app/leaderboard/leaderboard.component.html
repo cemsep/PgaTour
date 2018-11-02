@@ -1,0 +1,146 @@
+<div class="mat-elevation-z8">
+
+  <mat-toolbar>
+    <mat-toolbar-row id="title">Leaderboard</mat-toolbar-row>
+  </mat-toolbar>
+
+  <table mat-table #table [dataSource]="dataSource" multiTemplateDataRows matSort aria-label="Elements">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let player"> {{player.name}} </td>
+    </ng-container>
+
+
+    <!-- Score Column -->
+    <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef> Score </th>
+        <td mat-cell *matCellDef="let player"> {{player.score}} </td>
+      </ng-container>
+
+
+    <!-- Expanded Content -->
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let player" [attr.colspan]="displayedColumns.length">
+        <div class="player-detail" [@detailExpand]="player == expandedElement ? 'expanded' : 'collapsed'">
+          <div [hidden]="toggleScorecard">
+            <table class="scorecardFront9">
+              <tr>
+                <th id="tableRowTitle" class="firstRow">HOLE</th>
+                <td class="firstRow">1</td>
+                <td class="firstRow">2</td>
+                <td class="firstRow">3</td>
+                <td class="firstRow">4</td>
+                <td class="firstRow">5</td>
+                <td class="firstRow">6</td>
+                <td class="firstRow">7</td>
+                <td class="firstRow">8</td>
+                <td class="firstRow">9</td>
+                <td id="tableRowTitle" class="firstRow">OUT</td>
+                <td id="tableRowTitle" class="firstRow">TOTAL</td>
+              </tr>
+              <tr>
+                <th id="tableRowTitle">PAR</th>
+                <td> 5 </td>
+                <td> 4 </td>
+                <td> 5 </td>
+                <td> 3 </td>
+                <td> 5 </td>
+                <td> 4 </td>
+                <td> 4 </td>
+                <td> 4 </td>
+                <td> 3 </td>
+                <td>37</td>
+                <td>73</td>
+              </tr>
+              <tr>
+                <th id="tableRowTitle">ROUND</th>
+                <td> {{player.scorecard.hole1}} </td>
+                <td> {{player.scorecard.hole2}} </td>
+                <td> {{player.scorecard.hole3}} </td>
+                <td> {{player.scorecard.hole4}} </td>
+                <td> {{player.scorecard.hole5}} </td>
+                <td> {{player.scorecard.hole6}} </td>
+                <td> {{player.scorecard.hole7}} </td>
+                <td> {{player.scorecard.hole8}} </td>
+                <td> {{player.scorecard.hole9}} </td>
+                <td> {{player.scorecard.front9}} </td>
+                <td> {{player.scorecard.total}} </td>
+              </tr>
+            </table>
+            <button class="button" (click)="toggle()" mat-raised-button>Next</button>
+          </div>
+          <div [hidden]="!toggleScorecard">
+            <table class="scorecardBack9">
+              <tr>
+                <th id="tableRowTitle" class="firstRow">HOLE</th>
+                <td class="firstRow">10</td>
+                <td class="firstRow">11</td>
+                <td class="firstRow">12</td>
+                <td class="firstRow">13</td>
+                <td class="firstRow">14</td>
+                <td class="firstRow">15</td>
+                <td class="firstRow">16</td>
+                <td class="firstRow">17</td>
+                <td class="firstRow">18</td>
+                <td id="tableRowTitle" class="firstRow">OUT</td>
+                <td id="tableRowTitle" class="firstRow">TOTAL</td>
+              </tr>
+              <tr>
+                <th id="tableRowTitle">PAR</th>
+                <td> 5 </td>
+                <td> 4 </td>
+                <td> 4 </td>
+                <td> 3 </td>
+                <td> 4 </td>
+                <td> 4 </td>
+                <td> 5 </td>
+                <td> 4 </td>
+                <td> 3 </td>
+                <td>36</td>
+                <td>73</td>
+              </tr>
+              <tr>
+                <th id="tableRowTitle">ROUND</th>
+                <td> {{player.scorecard.hole10}} </td>
+                <td> {{player.scorecard.hole11}} </td>
+                <td> {{player.scorecard.hole12}} </td>
+                <td> {{player.scorecard.hole13}} </td>
+                <td> {{player.scorecard.hole14}} </td>
+                <td> {{player.scorecard.hole15}} </td>
+                <td> {{player.scorecard.hole16}} </td>
+                <td> {{player.scorecard.hole17}} </td>
+                <td> {{player.scorecard.hole18}} </td>
+                <td> {{player.scorecard.back9}} </td>
+                <td> {{player.scorecard.total}} </td>
+              </tr>
+            </table>
+            <button class="button" (click)="toggle()" mat-raised-button>Previous</button>
+          </div>
+          <button mat-button id="delButton" color="warn" (click)="onRemove(player.key)">DELETE</button>
+        </div>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        class="player-row"
+        [class.expanded]="expandedElement === row"
+        (click)="expandedElement === row? expandedElement = null : expandedElement = row">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+
+
+  </table>
+
+  <mat-paginator #paginator
+    [length]="dataSource.data.length"
+    [pageIndex]="0"
+    [pageSize]="50"
+    [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator>
+
+
+</div>
